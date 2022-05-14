@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Login-and-Registration-Form-with-Validation/static/css/main.abd64e84.css",
+    "main.js": "/Login-and-Registration-Form-with-Validation/static/js/main.5b105b8f.js",
+    "index.html": "/Login-and-Registration-Form-with-Validation/index.html",
+    "main.abd64e84.css.map": "/Login-and-Registration-Form-with-Validation/static/css/main.abd64e84.css.map",
+    "main.5b105b8f.js.map": "/Login-and-Registration-Form-with-Validation/static/js/main.5b105b8f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.abd64e84.css",
+    "static/js/main.5b105b8f.js"
+  ]
+}
