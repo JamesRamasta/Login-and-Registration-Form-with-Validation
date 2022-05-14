@@ -116,19 +116,16 @@ body {
 
 /*Login Page*/
 
-input[type="text"]{
-  width: 70%;
-  padding: 12px 20px ;
-  margin: 10px 0;
-  
-  
-}
+input[type="text"],
 input[type="password"] {
   width: 70%;
   padding: 12px 20px;
   margin: 8px 0;
- 
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
+
 
 #btnSignup{
   font-size: 20px;
