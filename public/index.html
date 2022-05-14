@@ -83,7 +83,7 @@
             <form>
             
                 <label for="uname" style="font-size: 20px;"><b>Student ID Number:</b></label><br/>
-                <input type="text" placeholder="Enter Student ID Number" name="uname" minlength="10" maxlength="10" required>
+                <input type="text" placeholder="Enter Student ID Number" name="loginID" minlength="10" maxlength="10" required>
                 <br/>
                 <label for="psw" style="font-size: 20px;"><b>Password:</b></label><br/>
                 <input type="password" placeholder="Enter Password" name="psw" id="loginPsw" required>  
@@ -103,19 +103,9 @@
 
                 <br/>
                 <br/>
-                <button class="btn btn-primary" id="btnLogin" onclick="welcome()">
+                <button class="btn btn-primary" id="btnLogin" >
                   Log In
-                 </button>
-
-                 
-                <script type = "text/javascript">  
-                    function welcome() {  
-  
-  
-                     alert ("Welcome to your account User!");  
-                   }  
-                   </script>       
-            
+                </button > 
             </form>
             <br/>
 
@@ -136,28 +126,28 @@
               <p>Please fill in this form to create an account.</p>
               <hr>
         
-              <form name="myForm" onsubmit="return validateForm()" >
+              <form name="myForm" class="myForm" id="myForm" >
                 
                   <label for="studentNumber" style="font-size: 20px;"><b>Student ID Number:</b></label><br/>
                   <input type="text" placeholder="Enter your Student ID Number" name="studentNumber" id="studentNumber" minlength="10" maxlength="10" required><br/>
         
                   <label for="lastName" style="font-size: 20px;"><b>Last Name:</b></label><br/>
-                  <input type="text" placeholder="Enter your Last Name" name="lastName" required><br/>
+                  <input type="text" placeholder="Enter your Last Name" name="lastName" id="lastName" required><br/>
 
                   <label for="givenName" style="font-size: 20px;"><b>Given Name:</b></label><br/>
-                  <input type="text" placeholder="Enter your Given Name" name="givenName" required><br/>
+                  <input type="text" placeholder="Enter your Given Name" name="givenName" id="givenName" required><br/>
 
                   <label for="middleName" style="font-size: 20px;"><b>Middle Name:</b></label><br/>
-                  <input type="text" placeholder="Enter your Middle Name" name="middleName"  required><br/>
+                  <input type="text" placeholder="Enter your Middle Name" name="middleName" id="middleName" required><br/>
 
                   <label for="college" style="font-size: 20px;"><b>College:</b></label><br/>
-                  <input type="text" placeholder="Enter your College" name="college"  required><br/>
+                  <input type="text" placeholder="Enter your College" name="college" id="college" required><br/>
               
                   <label for="program" style="font-size: 20px;"><b>Program:</b></label><br/>
-                  <input type="text" placeholder="Enter your Program Enrolled" name="program" required><br/>
+                  <input type="text" placeholder="Enter your Program Enrolled" name="program" id="program" required><br/>
         
                   <label for="yearLevel" style="font-size: 20px;"><b>Year Level:</b></label><br/>
-                  <input type="text" placeholder="Enter your Year Level" name="yearLevel"   minlength="1" maxlength="1"required><br/>
+                  <input type="text" placeholder="Enter your Year Level" name="yearLevel" id="yearLevel"  minlength="1" maxlength="1"required><br/>
         
                   <label for="psw" style="font-size: 20px;"><b>Password:</b></label><br/>
                   <input type="password" placeholder="Enter your Password" name="psw" id="psw" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title="The Password must have at least 8 characters, 1 special character, 1 number, and 1 uppercase and lowercase letter." required>
@@ -195,12 +185,31 @@
                 </script>
 
                   <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-                 <button class="btn btn-primary" class="btnReg">Register</button>
-
-               
-                 
-                
+                 <button class="btn btn-primary" class="btnReg" id="btnReg" onclick="CheckInput();">Register</button>
               </form>
+
+              <script>
+                function CheckInput(){//function to validate input text fields 
+                var SNumber = document.getElementById("studentNumber").value;
+                var lName = document.getElementById("lastName").value;
+                var gName = document.getElementById("givenName").value;
+                var mName = document.getElementById("middleName").value;
+                var college = document.getElementById("college").value;
+                var program = document.getElementById("program").value;
+                var yrLevel = document.getElementById("yearLevel").value;
+              
+
+                if( SNumber ==='' || lName ==='' || gName ==='' || mName ==='' || college ==='' || program ==='' || yrLevel ===''){
+                alert("Please fill all the fields! all of the fields are required.");
+                return false;
+                }else{
+                return true;
+                }   
+              }
+              </script>
+           
+                
+
               <h5>Already have an account?<button class="btn btn-link" id="btnbackLogin">Log In</button>here</h5>
             </section>
           </div>
